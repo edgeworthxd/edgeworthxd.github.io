@@ -378,7 +378,11 @@ Finished the purple retro theme inspired by classic emulator sites.
 
 <ul>
 
-<li>None at the moment :)</li>
+<li>Project Alpha</li>
+
+<li>Theme Config Pack</li>
+
+<li>Legacy Archive</li>
 
 </ul>
 
@@ -408,11 +412,8 @@ Sign Guestbook
 
 <img src="preview.png" alt="Preview">
 
-<div class="counter">
-
-004321
-
-</div>
+<!-- Added an id attribute to target the counter via JavaScript -->
+<div class="counter" id="hit-counter">000000</div>
 
 </div>
 
@@ -465,6 +466,28 @@ Download
 </footer>
 
 </div>
+
+<!-- Hit Counter JavaScript -->
+<script>
+  // Retrieve the existing count or default to starting at 4321 to look established
+  let hits = localStorage.getItem('edgeworth_hits');
+  
+  if (!hits) {
+    hits = 4321; // Your original placeholder starting number
+  } else {
+    hits = parseInt(hits, 10);
+  }
+
+  // Increment the count for this page load
+  hits++;
+  localStorage.setItem('edgeworth_hits', hits);
+
+  // Pad the final number with leading zeros so it always stays 6 digits long
+  let paddedHits = String(hits).padStart(6, '0');
+
+  // Inject the live number into your counter element
+  document.getElementById('hit-counter').textContent = paddedHits;
+</script>
 
 </body>
 </html>
