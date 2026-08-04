@@ -142,14 +142,12 @@ margin-bottom:20px;
 
 }
 
-/* Hide tab panels by default */
 .tab-content {
 
 display:none;
 
 }
 
-/* Class to show the active tab panel */
 .tab-content.active {
 
 display:block;
@@ -423,28 +421,23 @@ Sign Guestbook
 
 </div>
 
-<!-- Interactive Scripts -->
 <script>
-  // Tab Switching Functionality
   function switchTab(tabId) {
-    // Hide all tab panels
     const panels = document.querySelectorAll('.tab-content');
     panels.forEach(panel => panel.classList.remove('active'));
 
-    // Remove active styling from all nav links
     const tabs = document.querySelectorAll('nav a');
     tabs.forEach(tab => tab.classList.remove('active'));
 
-    // Show selected panel and highlight its tab
     document.getElementById(tabId).classList.add('active');
     document.getElementById('tab-' + tabId).classList.add('active');
   }
 
-  // Hit Counter functionality using LocalStorage
+  // Counter reset to start fresh at 0
   let hits = localStorage.getItem('edgeworth_hits');
   
   if (!hits) {
-    hits = 4321;
+    hits = 0; // Starts clean at zero instead of 4321
   } else {
     hits = parseInt(hits, 10);
   }
