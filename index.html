@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EdgeworthXD's Domain</title>
+    <style>
+        /* 2000s Retro Core Styles */
+        body {
+            background-color: #1a0933;
+            background-image: radial-gradient(#3a1c6a 1px, transparent 1px);
+            background-size: 16px 16px;
+            color: #e0d5f0;
+            font-family: "Courier New", Courier, monospace, "MS Sans Serif", sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+
+        /* Layout Container */
+        #container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: #2b164c;
+            border: 3px double #9d62f2;
+            padding: 15px;
+            box-shadow: 5px 5px 0px #0c0418;
+        }
+
+        /* Retro Banner Header */
+        header {
+            background: linear-gradient(to bottom, #4c228a, #200b3b);
+            border: 2px solid #a872f7;
+            padding: 20px;
+            text-align: center;
+            margin-bottom: 15px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.2em;
+            color: #fff;
+            text-shadow: 3px 3px 0px #7928ca, -1px -1px 0px #000;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            margin: 5px 0 0 0;
+            font-size: 0.9em;
+            color: #bfa3eb;
+            font-style: italic;
+        }
+
+        /* Main Workspace Wrapper */
+        #main-layout {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Left Navigation Menu (Classic 2000s Tabbed Sidebar) */
+        nav {
+            width: 200px;
+            flex-shrink: 0;
+        }
+
+        .nav-box {
+            background-color: #1f0e38;
+            border: 1px solid #7d44cc;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .nav-title {
+            background-color: #562999;
+            color: #fff;
+            padding: 3px 8px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #a872f7;
+        }
+
+        .tab-btn {
+            display: block;
+            width: 100%;
+            background: #3d1c6d;
+            color: #d6beeb;
+            border: 1px solid #6231a8;
+            padding: 8px 10px;
+            margin-bottom: 6px;
+            text-align: left;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9em;
+        }
+
+        .tab-btn:hover {
+            background: #562999;
+            color: #fff;
+            border-color: #a872f7;
+        }
+
+        .tab-btn.active {
+            background: #8142db;
+            color: #fff;
+            border-color: #fff;
+            font-weight: bold;
+            box-shadow: inset 2px 2px 0px #3d1c6d;
+        }
+
+        /* Content Window Pane */
+        main {
+            flex-grow: 1;
+            background-color: #22103b;
+            border: 2px inset #522794;
+            padding: 20px;
+            min-height: 400px;
+        }
+
+        /* Hidden tabs by default */
+        .tab-content {
+            display: none;
+        }
+
+        /* Show active tab */
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Typography & Retro Elements */
+        h2 {
+            color: #ba8fff;
+            border-bottom: 1px dashed #7d44cc;
+            padding-bottom: 5px;
+            margin-top: 0;
+            font-size: 1.5em;
+        }
+
+        a {
+            color: #b580ff;
+        }
+
+        a:hover {
+            color: #fff;
+            background-color: #562999;
+        }
+
+        .news-item {
+            background-color: #1b0c30;
+            border-left: 4px solid #9d62f2;
+            padding: 10px;
+            margin-bottom: 15px;
+        }
+
+        .news-date {
+            font-size: 0.8em;
+            color: #9d62f2;
+            font-weight: bold;
+        }
+
+        /* Retro Status Footer */
+        footer {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 0.8em;
+            border-top: 1px solid #522794;
+            padding-top: 10px;
+            color: #8c71b3;
+        }
+
+        .blink {
+            animation: blinker 1.5s linear infinite;
+            color: #ff55ff;
+            font-weight: bold;
+        }
+
+        @keyframes blinker {
+            50% { opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<div id="container">
+
+    <!-- Header Banner -->
+    <header>
+        <h1>EdgeworthXD's Domain</h1>
+        <p>== Optimized for 1024x768 resolution & Netscape Navigator ==</p>
+    </header>
+
+    <!-- Main Section -->
+    <div id="main-layout">
+        
+        <!-- Left Sidebar Navigation -->
+        <nav>
+            <div class="nav-box">
+                <div class="nav-title">Navigation</div>
+                <button class="tab-btn active" onclick="openTab(event, 'home')">[ Home ]</button>
+                <button class="tab-btn" onclick="openTab(event, 'updates')">[ Updates ]</button>
+                <button class="tab-btn" onclick="openTab(event, 'projects')">[ Projects ]</button>
+                <button class="tab-btn" onclick="openTab(event, 'guestbook')">[ Guestbook ]</button>
+            </div>
+            
+            <div class="nav-box">
+                <div class="nav-title">Stats</div>
+                <div style="font-size: 0.8em; padding: 5px; text-align: center;">
+                    Visitors: <br>
+                    <span style="font-family: monospace; font-size:1.2em; background:#000; color:#0f0; padding:2px 5px; letter-spacing: 2px;">004321</span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Dynamic Content Window -->
+        <main>
+            
+            <!-- HOME TAB -->
+            <div id="home" class="tab-content active">
+                <h2>Welcome to the Domain</h2>
+                <p>Hello world! Welcome to my personal corner of the web. This site is built to mimic the golden era of emulation sites, early forum hubs, and custom fan pages from the 2000s.</p>
+                <p>Feel free to click through the side menu panels to explore my text documents, project files, and system setups.</p>
+                <p><span class="blink">NEW:</span> Check out the updates section for recent movements.</p>
+            </div>
+
+            <!-- UPDATES TAB -->
+            <div id="updates" class="tab-content">
+                <h2>Latest Log Updates</h2>
+                
+                <div class="news-item">
+                    <div class="news-date">August 04, 2026</div>
+                    <p style="margin: 5px 0 0 0">Migrated the entire ecosystem to GitHub Pages infrastructure. The structural tabs are now fully operational using standard JavaScript mechanics.</p>
+                </div>
+
+                <div class="news-item">
+                    <div class="news-date">July 21, 2026</div>
+                    <p style="margin: 5px 0 0 0">Drafted the layout blueprint inspired by classic Nintendo DS emulator hubs like melonDS. Purple hex configurations locked in.</p>
+                </div>
+            </div>
+
+            <!-- PROJECTS TAB -->
+            <div id="projects" class="tab-content">
+                <h2>My Projects</h2>
+                <p>A directory of software scripts, custom configurations, and tools I have compiled over time:</p>
+                <ul>
+                    <li><strong>Project Alpha:</strong> A retro emulation layout sandbox. (<a href="#">Source Code</a>)</li>
+                    <li><strong>Theme Config Pack:</strong> Custom purple asset matrix for text editors. (<a href="#">Download</a>)</li>
+                    <li><strong>Legacy Archive:</strong> Old code segments kept online for historical record. (<a href="#">Browse</a>)</li>
+                </ul>
+            </div>
+
+            <!-- GUESTBOOK TAB -->
+            <div id="guestbook" class="tab-content">
+                <h2>Sign My Guestbook</h2>
+                <p>Leave a digital trace before you log off!</p>
+                <div style="background-color: #1b0c30; border: 1px solid #7d44cc; padding: 15px; margin-top: 10px;">
+                    <label style="display:block; margin-bottom: 5px;">Handle / Username:</label>
+                    <input type="text" style="width: 90%; background:#2b164c; color:#fff; border:1px solid #9d62f2; padding:4px; margin-bottom:10px;">
+                    
+                    <label style="display:block; margin-bottom: 5px;">Transmission Message:</label>
+                    <textarea rows="4" style="width: 90%; background:#2b164c; color:#fff; border:1px solid #9d62f2; padding:4px; margin-bottom:10px; font-family:inherit;"></textarea>
+                    
+                    <button type="button" style="background:#562999; color:#fff; border:1px solid #a872f7; padding:5px 15px; cursor:pointer;" onclick="alert('Since this site runs statically on GitHub, this dummy form needs a backend server to save posts permanently!')">Transmit Message</button>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 EdgeworthXD. Powered by static components and retro vibes.</p>
+    </footer>
+
+</div>
+
+<!-- Tab Navigation Engine -->
+<script>
+function openTab(evt, tabId) {
+    // Hide all tab elements
+    var i, tabContent, tabButtons;
+    tabContent = document.getElementsByClassName("tab-content");
+    for (i = 0; i < tabContent.length; i++) {
+        tabContent[i].classList.remove("active");
+    }
+
+    // Deactivate all button highlights
+    tabButtons = document.getElementsByClassName("tab-btn");
+    for (i = 0; i < tabButtons.length; i++) {
+        tabButtons[i].classList.remove("active");
+    }
+
+    // Activate the targets
+    document.getElementById(tabId).classList.add("active");
+    evt.currentTarget.classList.add("active");
+}
+</script>
+
+</body>
+</html>
