@@ -1,298 +1,474 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EdgeworthXD's Domain</title>
-    <style>
-        /* 2000s Retro Core Styles */
-        body {
-            background-color: #1a0933;
-            background-image: radial-gradient(#3a1c6a 1px, transparent 1px);
-            background-size: 16px 16px;
-            color: #e0d5f0;
-            font-family: "Courier New", Courier, monospace, "MS Sans Serif", sans-serif;
-            margin: 0;
-            padding: 20px;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        /* Layout Container */
-        #container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: #2b164c;
-            border: 3px double #9d62f2;
-            padding: 15px;
-            box-shadow: 5px 5px 0px #0c0418;
-        }
+<title>EdgeworthXD's Domain</title>
 
-        /* Retro Banner Header */
-        header {
-            background: linear-gradient(to bottom, #4c228a, #200b3b);
-            border: 2px solid #a872f7;
-            padding: 20px;
-            text-align: center;
-            margin-bottom: 15px;
-        }
+<style>
 
-        header h1 {
-            margin: 0;
-            font-size: 2.2em;
-            color: #fff;
-            text-shadow: 3px 3px 0px #7928ca, -1px -1px 0px #000;
-            letter-spacing: 2px;
-        }
+body{
 
-        header p {
-            margin: 5px 0 0 0;
-            font-size: 0.9em;
-            color: #bfa3eb;
-            font-style: italic;
-        }
+margin:0;
+padding:0;
 
-        /* Main Workspace Wrapper */
-        #main-layout {
-            display: flex;
-            gap: 15px;
-        }
+background:#13081f;
+background-image:
+radial-gradient(#31104f 1px,transparent 1px),
+linear-gradient(rgba(255,255,255,.02),rgba(0,0,0,.02));
 
-        /* Left Navigation Menu (Classic 2000s Tabbed Sidebar) */
-        nav {
-            width: 200px;
-            flex-shrink: 0;
-        }
+background-size:18px 18px,100% 100%;
 
-        .nav-box {
-            background-color: #1f0e38;
-            border: 1px solid #7d44cc;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
+font-family:Verdana,sans-serif;
 
-        .nav-title {
-            background-color: #562999;
-            color: #fff;
-            padding: 3px 8px;
-            font-weight: bold;
-            font-size: 0.9em;
-            margin-bottom: 10px;
-            border-bottom: 1px solid #a872f7;
-        }
+color:#ddd;
 
-        .tab-btn {
-            display: block;
-            width: 100%;
-            background: #3d1c6d;
-            color: #d6beeb;
-            border: 1px solid #6231a8;
-            padding: 8px 10px;
-            margin-bottom: 6px;
-            text-align: left;
-            cursor: pointer;
-            font-family: inherit;
-            font-size: 0.9em;
-        }
+}
 
-        .tab-btn:hover {
-            background: #562999;
-            color: #fff;
-            border-color: #a872f7;
-        }
+#page{
 
-        .tab-btn.active {
-            background: #8142db;
-            color: #fff;
-            border-color: #fff;
-            font-weight: bold;
-            box-shadow: inset 2px 2px 0px #3d1c6d;
-        }
+width:960px;
+margin:20px auto;
 
-        /* Content Window Pane */
-        main {
-            flex-grow: 1;
-            background-color: #22103b;
-            border: 2px inset #522794;
-            padding: 20px;
-            min-height: 400px;
-        }
+border:1px solid #8b5cff;
 
-        /* Hidden tabs by default */
-        .tab-content {
-            display: none;
-        }
+background:#140d22;
 
-        /* Show active tab */
-        .tab-content.active {
-            display: block;
-        }
+box-shadow:0 0 20px #000;
 
-        /* Typography & Retro Elements */
-        h2 {
-            color: #ba8fff;
-            border-bottom: 1px dashed #7d44cc;
-            padding-bottom: 5px;
-            margin-top: 0;
-            font-size: 1.5em;
-        }
+}
 
-        a {
-            color: #b580ff;
-        }
+header{
 
-        a:hover {
-            color: #fff;
-            background-color: #562999;
-        }
+background:linear-gradient(#522894,#22053d);
 
-        .news-item {
-            background-color: #1b0c30;
-            border-left: 4px solid #9d62f2;
-            padding: 10px;
-            margin-bottom: 15px;
-        }
+padding:30px;
 
-        .news-date {
-            font-size: 0.8em;
-            color: #9d62f2;
-            font-weight: bold;
-        }
+text-align:center;
 
-        /* Retro Status Footer */
-        footer {
-            margin-top: 15px;
-            text-align: center;
-            font-size: 0.8em;
-            border-top: 1px solid #522794;
-            padding-top: 10px;
-            color: #8c71b3;
-        }
+border-bottom:2px solid #9f6cff;
 
-        .blink {
-            animation: blinker 1.5s linear infinite;
-            color: #ff55ff;
-            font-weight: bold;
-        }
+}
 
-        @keyframes blinker {
-            50% { opacity: 0; }
-        }
-    </style>
+header h1{
+
+margin:0;
+
+font-size:48px;
+
+letter-spacing:2px;
+
+color:white;
+
+text-shadow:3px 3px black;
+
+}
+
+header p{
+
+margin-top:10px;
+
+color:#caaeff;
+
+}
+
+nav{
+
+background:#250942;
+
+padding:8px;
+
+text-align:center;
+
+border-bottom:1px solid #8b5cff;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+font-weight:bold;
+
+margin:0 10px;
+
+}
+
+nav a:hover{
+
+color:#dcb7ff;
+
+}
+
+#login{
+
+background:#1c0833;
+
+text-align:center;
+
+padding:6px;
+
+font-size:13px;
+
+border-bottom:1px solid #6633bb;
+
+}
+
+#content{
+
+display:flex;
+
+padding:18px;
+
+gap:20px;
+
+}
+
+#left{
+
+flex:1;
+
+}
+
+#right{
+
+width:270px;
+
+}
+
+.panel{
+
+background:#12091d;
+
+border:1px solid #6936b5;
+
+padding:15px;
+
+margin-bottom:20px;
+
+}
+
+.panel h2{
+
+margin-top:0;
+
+color:#d5b0ff;
+
+border-bottom:1px dashed #6936b5;
+
+padding-bottom:5px;
+
+}
+
+.news{
+
+margin-bottom:15px;
+
+padding-left:12px;
+
+border-left:4px solid #9d62f2;
+
+}
+
+.date{
+
+font-size:12px;
+
+color:#b68cff;
+
+font-weight:bold;
+
+}
+
+img{
+
+width:100%;
+
+border:2px solid #7b4ad3;
+
+display:block;
+
+}
+
+.counter{
+
+margin-top:15px;
+
+text-align:center;
+
+font-family:monospace;
+
+font-size:28px;
+
+background:black;
+
+color:#00ff66;
+
+padding:8px;
+
+border:2px inset #555;
+
+}
+
+input,
+textarea{
+
+width:100%;
+
+box-sizing:border-box;
+
+background:#24103d;
+
+color:white;
+
+border:1px solid #8f64f7;
+
+padding:8px;
+
+margin-bottom:10px;
+
+}
+
+button{
+
+background:#5f2fb5;
+
+border:1px solid #b996ff;
+
+color:white;
+
+padding:8px 18px;
+
+cursor:pointer;
+
+}
+
+button:hover{
+
+background:#7b4ad3;
+
+}
+
+footer{
+
+text-align:center;
+
+padding:15px;
+
+border-top:1px solid #6936b5;
+
+color:#9b7ccc;
+
+font-size:13px;
+
+}
+
+.blink{
+
+animation:blink 1.3s infinite;
+
+color:#ff66ff;
+
+font-weight:bold;
+
+}
+
+@keyframes blink{
+
+50%{opacity:0;}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-<div id="container">
+<div id="page">
 
-    <!-- Header Banner -->
-    <header>
-        <h1>EdgeworthXD's Domain</h1>
-        <p>== Optimized for 1024x768 resolution & Netscape Navigator ==</p>
-    </header>
+<header>
 
-    <!-- Main Section -->
-    <div id="main-layout">
-        
-        <!-- Left Sidebar Navigation -->
-        <nav>
-            <div class="nav-box">
-                <div class="nav-title">Navigation</div>
-                <button class="tab-btn active" onclick="openTab(event, 'home')">[ Home ]</button>
-                <button class="tab-btn" onclick="openTab(event, 'updates')">[ Updates ]</button>
-                <button class="tab-btn" onclick="openTab(event, 'projects')">[ Projects ]</button>
-                <button class="tab-btn" onclick="openTab(event, 'guestbook')">[ Guestbook ]</button>
-            </div>
-            
-            <div class="nav-box">
-                <div class="nav-title">Stats</div>
-                <div style="font-size: 0.8em; padding: 5px; text-align: center;">
-                    Visitors: <br>
-                    <span style="font-family: monospace; font-size:1.2em; background:#000; color:#0f0; padding:2px 5px; letter-spacing: 2px;">004321</span>
-                </div>
-            </div>
-        </nav>
+<h1>EdgeworthXD's Domain</h1>
 
-        <!-- Dynamic Content Window -->
-        <main>
-            
-            <!-- HOME TAB -->
-            <div id="home" class="tab-content active">
-                <h2>Welcome to the Domain</h2>
-                <p>Hello world! Welcome to my personal corner of the web. This site is built to mimic the golden era of emulation sites, early forum hubs, and custom fan pages from the 2000s.</p>
-                <p>Feel free to click through the side menu panels to explore my text documents, project files, and system setups.</p>
-                <p><span class="blink">NEW:</span> Check out the updates section for recent movements.</p>
-            </div>
+<p>Optimized for 1024×768 • Retro Computing • Static Forever</p>
 
-            <!-- UPDATES TAB -->
-            <div id="updates" class="tab-content">
-                <h2>Latest Log Updates</h2>
-                
-                <div class="news-item">
-                    <div class="news-date">August 04, 2026</div>
-                    <p style="margin: 5px 0 0 0">Migrated the entire ecosystem to GitHub Pages infrastructure. The structural tabs are now fully operational using standard JavaScript mechanics.</p>
-                </div>
+</header>
 
-                <div class="news-item">
-                    <div class="news-date">July 21, 2026</div>
-                    <p style="margin: 5px 0 0 0">Drafted the layout blueprint inspired by classic Nintendo DS emulator hubs like melonDS. Purple hex configurations locked in.</p>
-                </div>
-            </div>
+<nav>
 
-            <!-- PROJECTS TAB -->
-            <div id="projects" class="tab-content">
-                <h2>My Projects</h2>
-                <p>A directory of software scripts, custom configurations, and tools I have compiled over time:</p>
-                <ul>
-                    <li><strong>Project Alpha:</strong> A retro emulation layout sandbox. (<a href="#">Source Code</a>)</li>
-                    <li><strong>Theme Config Pack:</strong> Custom purple asset matrix for text editors. (<a href="#">Download</a>)</li>
-                    <li><strong>Legacy Archive:</strong> Old code segments kept online for historical record. (<a href="#">Browse</a>)</li>
-                </ul>
-            </div>
+<a href="#welcome">Home</a> |
 
-            <!-- GUESTBOOK TAB -->
-            <div id="guestbook" class="tab-content">
-                <h2>Sign My Guestbook</h2>
-                <p>Leave a digital trace before you log off!</p>
-                <div style="background-color: #1b0c30; border: 1px solid #7d44cc; padding: 15px; margin-top: 10px;">
-                    <label style="display:block; margin-bottom: 5px;">Handle / Username:</label>
-                    <input type="text" style="width: 90%; background:#2b164c; color:#fff; border:1px solid #9d62f2; padding:4px; margin-bottom:10px;">
-                    
-                    <label style="display:block; margin-bottom: 5px;">Transmission Message:</label>
-                    <textarea rows="4" style="width: 90%; background:#2b164c; color:#fff; border:1px solid #9d62f2; padding:4px; margin-bottom:10px; font-family:inherit;"></textarea>
-                    
-                    <button type="button" style="background:#562999; color:#fff; border:1px solid #a872f7; padding:5px 15px; cursor:pointer;" onclick="alert('Since this site runs statically on GitHub, this dummy form needs a backend server to save posts permanently!')">Transmit Message</button>
-                </div>
-            </div>
+<a href="#updates">Updates</a> |
 
-        </main>
-    </div>
+<a href="#projects">Projects</a> |
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 EdgeworthXD. Powered by static components and retro vibes.</p>
-    </footer>
+<a href="#guestbook">Guestbook</a>
+
+</nav>
+
+<div id="login">
+
+Register | Log In
 
 </div>
 
-<!-- Tab Navigation Engine -->
-<script>
-function openTab(evt, tabId) {
-    // Hide all tab elements
-    var i, tabContent, tabButtons;
-    tabContent = document.getElementsByClassName("tab-content");
-    for (i = 0; i < tabContent.length; i++) {
-        tabContent[i].classList.remove("active");
-    }
+<div id="content">
 
-    // Deactivate all button highlights
-    tabButtons = document.getElementsByClassName("tab-btn");
-    for (i = 0; i < tabButtons.length; i++) {
-        tabButtons[i].classList.remove("active");
-    }
+<div id="left">
 
-    // Activate the targets
-    document.getElementById(tabId).classList.add("active");
-    evt.currentTarget.classList.add("active");
-}
-</script>
+<div class="panel" id="welcome">
+
+<h2>Welcome</h2>
+
+<p>
+
+Welcome to my personal corner of the web.
+
+Inspired by classic emulator websites, fan pages, and early 2000s communities.
+
+</p>
+
+<p>
+
+<span class="blink">NEW!</span>
+
+The entire layout has been rebuilt into a classic project homepage.
+
+</p>
+
+</div>
+
+<div class="panel" id="updates">
+
+<h2>Latest Updates</h2>
+
+<div class="news">
+
+<div class="date">
+
+August 04, 2026
+
+</div>
+
+Migrated the project to GitHub Pages and rebuilt the interface.
+
+</div>
+
+<div class="news">
+
+<div class="date">
+
+July 21, 2026
+
+</div>
+
+Finished the purple retro theme inspired by classic emulator sites.
+
+</div>
+
+</div>
+
+<div class="panel" id="projects">
+
+<h2>Projects</h2>
+
+<ul>
+
+<li>Project Alpha</li>
+
+<li>Theme Config Pack</li>
+
+<li>Legacy Archive</li>
+
+</ul>
+
+</div>
+
+<div class="panel" id="guestbook">
+
+<h2>Guestbook</h2>
+
+<input placeholder="Username">
+
+<textarea rows="5" placeholder="Leave a message..."></textarea>
+
+<button onclick="alert('A backend would be needed to save messages permanently.')">
+
+Sign Guestbook
+
+</button>
+
+</div>
+
+</div>
+
+<div id="right">
+
+<div class="panel">
+
+<img src="preview.png" alt="Preview">
+
+<div class="counter">
+
+004321
+
+</div>
+
+</div>
+
+<div class="panel">
+
+<h2>Downloads</h2>
+
+<p>
+
+Latest Release<br>
+
+v1.0.0
+
+</p>
+
+<button>
+
+Download
+
+</button>
+
+</div>
+
+<div class="panel">
+
+<h2>Quick Links</h2>
+
+<ul>
+
+<li>GitHub</li>
+
+<li>Source Code</li>
+
+<li>FAQ</li>
+
+<li>Screenshots</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</div>
+
+<footer>
+
+© 2026 EdgeworthXD • Powered by GitHub Pages • Retro Forever
+
+</footer>
+
+</div>
 
 </body>
 </html>
