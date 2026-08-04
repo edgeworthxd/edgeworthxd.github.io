@@ -95,25 +95,16 @@ font-weight:bold;
 
 margin:0 10px;
 
+cursor:pointer;
+
 }
 
-nav a:hover{
+nav a:hover,
+nav a.active{
 
 color:#dcb7ff;
 
-}
-
-#login{
-
-background:#1c0833;
-
-text-align:center;
-
-padding:6px;
-
-font-size:13px;
-
-border-bottom:1px solid #6633bb;
+text-decoration:underline;
 
 }
 
@@ -151,6 +142,20 @@ margin-bottom:20px;
 
 }
 
+/* Hide tab panels by default */
+.tab-content {
+
+display:none;
+
+}
+
+/* Class to show the active tab panel */
+.tab-content.active {
+
+display:block;
+
+}
+
 .panel h2{
 
 margin-top:0;
@@ -183,19 +188,7 @@ font-weight:bold;
 
 }
 
-img{
-
-width:100%;
-
-border:2px solid #7b4ad3;
-
-display:block;
-
-}
-
 .counter{
-
-margin-top:15px;
 
 text-align:center;
 
@@ -300,27 +293,21 @@ font-weight:bold;
 
 <nav>
 
-<a href="#welcome">Home</a> |
+<a onclick="switchTab('welcome')" id="tab-welcome" class="active">Home</a> |
 
-<a href="#updates">Updates</a> |
+<a onclick="switchTab('updates')" id="tab-updates">Updates</a> |
 
-<a href="#projects">Projects</a> |
+<a onclick="switchTab('projects')" id="tab-projects">Projects</a> |
 
-<a href="#guestbook">Guestbook</a>
+<a onclick="switchTab('guestbook')" id="tab-guestbook">Guestbook</a>
 
 </nav>
-
-<div id="login">
-
-Register | Log In
-
-</div>
 
 <div id="content">
 
 <div id="left">
 
-<div class="panel" id="welcome">
+<div class="panel tab-content active" id="welcome">
 
 <h2>Welcome</h2>
 
@@ -342,7 +329,7 @@ The entire layout has been rebuilt into a classic project homepage.
 
 </div>
 
-<div class="panel" id="updates">
+<div class="panel tab-content" id="updates">
 
 <h2>Latest Updates</h2>
 
@@ -372,23 +359,15 @@ Finished the purple retro theme inspired by classic emulator sites.
 
 </div>
 
-<div class="panel" id="projects">
+<div class="panel tab-content" id="projects">
 
 <h2>Projects</h2>
 
-<ul>
-
-<li>Project Alpha</li>
-
-<li>Theme Config Pack</li>
-
-<li>Legacy Archive</li>
-
-</ul>
+<p>I didn't make anything yet. Come back for MORE DIGITAL GOODIES!!</p>
 
 </div>
 
-<div class="panel" id="guestbook">
+<div class="panel tab-content" id="guestbook">
 
 <h2>Guestbook</h2>
 
@@ -410,30 +389,7 @@ Sign Guestbook
 
 <div class="panel">
 
-<img src="preview.png" alt="Preview">
-
-<!-- Added an id attribute to target the counter via JavaScript -->
 <div class="counter" id="hit-counter">000000</div>
-
-</div>
-
-<div class="panel">
-
-<h2>Downloads</h2>
-
-<p>
-
-Latest Release<br>
-
-v1.0.0
-
-</p>
-
-<button>
-
-Download
-
-</button>
 
 </div>
 
@@ -467,25 +423,36 @@ Download
 
 </div>
 
-<!-- Hit Counter JavaScript -->
+<!-- Interactive Scripts -->
 <script>
-  // Retrieve the existing count or default to starting at 4321 to look established
+  // Tab Switching Functionality
+  function switchTab(tabId) {
+    // Hide all tab panels
+    const panels = document.querySelectorAll('.tab-content');
+    panels.forEach(panel => panel.classList.remove('active'));
+
+    // Remove active styling from all nav links
+    const tabs = document.querySelectorAll('nav a');
+    tabs.forEach(tab => tab.classList.remove('active'));
+
+    // Show selected panel and highlight its tab
+    document.getElementById(tabId).classList.add('active');
+    document.getElementById('tab-' + tabId).classList.add('active');
+  }
+
+  // Hit Counter functionality using LocalStorage
   let hits = localStorage.getItem('edgeworth_hits');
   
   if (!hits) {
-    hits = 4321; // Your original placeholder starting number
+    hits = 4321;
   } else {
     hits = parseInt(hits, 10);
   }
 
-  // Increment the count for this page load
   hits++;
   localStorage.setItem('edgeworth_hits', hits);
 
-  // Pad the final number with leading zeros so it always stays 6 digits long
   let paddedHits = String(hits).padStart(6, '0');
-
-  // Inject the live number into your counter element
   document.getElementById('hit-counter').textContent = paddedHits;
 </script>
 
